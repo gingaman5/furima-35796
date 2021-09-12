@@ -40,8 +40,8 @@
 
   ## ordersテーブル
 
-  |Column| |Type|Options|
-  |------| |----------|------------|
+  |Column| |Type      |Options|
+  |------| |----------|-------|
   |user  | |references|null: false, foreign_key: true|
   |item  | |references|null: false, foreign_key: true|
 
@@ -53,8 +53,8 @@
 
   ## ship_addressesテーブル
 
-  |Column| |Type   |Options|
-  |------| |-------|-------|
+  |Column          |Type      |Options|
+  |----------------|----------|-------|
   |order|          |references|null: false, foreign_key: true|
   |postcode|       |string    |null: false|
   |prefecture_id|  |integer   |null: false|
