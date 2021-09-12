@@ -13,6 +13,19 @@ Things you may want to cover:
 
 * Database creation
 
+  |Column|            |Type|Options|
+  |------|            |------|------------|
+  |item_name|         |string|null: false|
+  |item_description|  |text  |null: false|
+  |category_id|       |integer|null: false|
+  |item_condition_id| |integer|null: false|
+  |ship_charge_id|    |integer|null: false|
+  |prefecture_id|     |integer|null: false|
+  |ship_day_id|       |integer|null: false|
+  |price|             |integer|null: false|
+  |user|              |references|null: false, foreign_key: true|
+
+
 * Database initialization
 
 * How to run the test suite
