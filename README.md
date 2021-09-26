@@ -24,7 +24,7 @@
   |------|            |------|------------|
   |item_name|         |string|null: false|
   |item_description|  |text  |null: false|
-| |category_id|       |integer|null: false|
+  |category_id|       |integer|null: false|
   |item_condition_id| |integer|null: false|
   |ship_charge_id|    |integer|null: false|
   |prefecture_id|     |integer|null: false|
