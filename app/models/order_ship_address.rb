@@ -6,6 +6,7 @@ class OrderShipAddress
     validates :prefecture_id, :city, :block, :item_id, :user_id, :token
     validates :postcode, format: { with: /\A\d{3}-\d{4}\z/ }
     validates :telephone_number, format: { with: /\A\d{10,11}\z/ }
+    validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
   end
 
   def save

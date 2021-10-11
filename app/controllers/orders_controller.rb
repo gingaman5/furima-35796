@@ -5,11 +5,9 @@ class OrdersController < ApplicationController
 
   def index
     @order = OrderShipAddress.new
-    @item = Item.find(params[:item_id])
   end
 
   def create
-    @item = Item.find(params[:item_id])
     @order = OrderShipAddress.new(order_params)
     if @order.valid?
       pay_item
@@ -30,7 +28,6 @@ class OrdersController < ApplicationController
 
   def pay_item
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-    Payjp.api_key = 'sk_test_fd311af00bd7efa3a334e1de'
     Payjp::Charge.create(
       amount: @item.price,
       card: order_params[:token],
