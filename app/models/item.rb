@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   belongs_to :ship_day
 
   validates :item_name, :item_description, :category_id, :item_condition_id, :ship_charge_id, :prefecture_id, :ship_day_id,
-            :price, :image, presence: true
+            :image, presence: true
 
   validates :category_id, :item_condition_id, :ship_charge_id, :prefecture_id, :ship_day_id,
             numericality: { other_than: 1, message: "can't be blank" }
